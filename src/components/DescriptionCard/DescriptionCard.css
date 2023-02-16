@@ -1,0 +1,21 @@
+.card-container {
+    width: 80%;
+    background-color: rgb(130,255,255,0.75);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 30px;
+}
+
+.profile-pic {
+    max-width: 100px;
+    height: auto;
+}
+
+.profile-title {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.profile-description {
+
+}
