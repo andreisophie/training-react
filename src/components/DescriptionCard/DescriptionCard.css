@@ -1,5 +1,5 @@
 .card-container {
-    width: 80%;
+    width: 60%;
     background-color: rgb(130,255,255,0.75);
     border-radius: 30px;
     margin: 10px;
@@ -16,6 +16,16 @@
     font-size: x-large;
 }
 
-.profile-description {
+.gender-icon-m {
+    height: 50px;
+    width: auto;
+}
 
+.gender-icon-f {
+    height: 60px;
+    width: auto;
+}
+
+.other-elements * {
+    max-width: 100%;
 }

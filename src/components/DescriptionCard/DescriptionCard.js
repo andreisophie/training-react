@@ -1,6 +1,11 @@
 import "./DescriptionCard.css"
+import male from "../../assets/male.png"
+import female from "../../assets/female.png"
 
 export default function DescriptionCard(props) {
+    const malePicture = <img src={male} className="gender-icon-m my-auto"/>
+    const femalePicture = <img src={female} className="gender-icon-f my-auto"/>
+
     return (
         <div className="card-container d-flex flex-column">
             <div className="d-flex flex-row align-items-start pb-3">
@@ -13,8 +18,11 @@ export default function DescriptionCard(props) {
                         {props.description}
                     </div>
                 </div>
+                {props.gender === "male" ? malePicture : (props.gender === "female" ? femalePicture : <></>)}
             </div>
-            {props.children}
+            <div className="other-elements">
+                {props.children}
+            </div>
         </div>
     )
 }

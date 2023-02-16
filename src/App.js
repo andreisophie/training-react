@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DescriptionCard from './components/DescriptionCard/DescriptionCard';
@@ -13,17 +12,20 @@ function App() {
       profilePic: cat1,
       name: "Cat McCattinson",
       description: "Meow meow",
+      gender: "female",
       other: <div>Imi plac mangaielile!</div>
     },
     {
       profilePic: cat2,
       name: "John Clawlibus",
-      description: "Scrrrch"
+      description: "I don't need a description",
+      gender: "male"
     },
     {
       profilePic: cat3,
       name: "Sony Pea",
       description: "Mrrrr",
+      gender: "other",
       other: 
         <div>
           <div>I like memes!</div>
@@ -41,6 +43,7 @@ function App() {
             profilePic={json.profilePic}
             name = {json.name}
             description = {json.description}
+            gender = {json.gender}
           >
             {json.other}
           </DescriptionCard>)}
