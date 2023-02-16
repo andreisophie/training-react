@@ -6,6 +6,10 @@
     padding: 30px;
 }
 
+.favorite {
+    background-color: rgb(218,165,32,0.75);
+}
+
 .profile-pic {
     max-width: 100px;
     height: auto;
