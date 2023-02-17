@@ -13,8 +13,10 @@ export default function DescriptionCard(props) {
     function changeStyle() {
         if (style === "") {
             setStyle("favorite");
+            props.updateFavorites(1);
         } else {
             setStyle("");
+            props.updateFavorites(-1);
         }
     }
 
