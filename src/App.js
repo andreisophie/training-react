@@ -6,7 +6,7 @@ import cat2 from './assets/cat2.png'
 import cat3 from './assets/cat3.jpg'
 import catMeme from './assets/catMeme.jpg'
 import FavoritesNotif from './components/FavoritesNotif/FavoritesNotif';
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function App() {
   const [nrFavorites, setNrFavorites] = useState(0);
@@ -14,6 +14,10 @@ function App() {
   function updateFavorites(value) {
     setNrFavorites(nrFavorites + value);
   }
+
+  let nrProfiles = 0;
+
+  useEffect(() => {nrProfiles = 0;});
 
   const catsArray=[
     {
@@ -37,7 +41,7 @@ function App() {
       other: 
         <div>
           <div>I like memes!</div>
-          <img src={catMeme}/>
+          <img src={catMeme} alt="meme"/>
         </div>
     }
   ]
@@ -48,7 +52,8 @@ function App() {
       <div className="title">Cat Tinder</div>
       <div className="profiles d-flex flex-column">
         {catsArray.map((json) => 
-          <DescriptionCard 
+          <DescriptionCard
+            key = {nrProfiles++}
             profilePic={json.profilePic}
             name = {json.name}
             description = {json.description}

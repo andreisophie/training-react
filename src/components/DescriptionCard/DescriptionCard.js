@@ -7,8 +7,8 @@ import { Button } from 'react-bootstrap'
 export default function DescriptionCard(props) {
     const [style, setStyle] = useState("");
 
-    const malePicture = <img src={male} className="gender-icon-m my-auto"/>
-    const femalePicture = <img src={female} className="gender-icon-f my-auto"/>
+    const malePicture = <img src={male} className="gender-icon-m my-auto" alt="male"/>
+    const femalePicture = <img src={female} className="gender-icon-f my-auto" alt="female"/>
 
     function changeStyle() {
         if (style === "") {
@@ -23,7 +23,7 @@ export default function DescriptionCard(props) {
     return (
         <div className={"card-container d-flex flex-column " + style}>
             <div className="d-flex flex-row align-items-start pb-3">
-                <img className="profile-pic" src = {props.profilePic}/>
+                <img className="profile-pic" src = {props.profilePic} alt = "profile"/>
                 <div className="d-flex flex-column p-3">
                     <div className="profile-title">
                         {props.name}
