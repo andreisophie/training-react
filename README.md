@@ -2,6 +2,10 @@
 
 Made by Andrei Mărunțiș
 
+## Running the app
+
+Just run `npm i` and `npm start` from root directory.
+
 ## Useful links
 
 - JSX: https://reactjs.org/docs/introducing-jsx.html
