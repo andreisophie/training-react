@@ -12,7 +12,7 @@ export default function DescriptionCard(props) {
 
     function changeStyle() {
         if (style === "") {
-            setStyle("favorite");
+            setStyle("favorite"); // style = "favorite"
             props.updateFavorites(1);
         } else {
             setStyle("");
@@ -32,7 +32,9 @@ export default function DescriptionCard(props) {
                         {props.description}
                     </div>
                 </div>
-                {props.gender === "male" ? malePicture : (props.gender === "female" ? femalePicture : <></>)}
+                {/* {props.gender === "male" ? malePicture : (props.gender === "female" ? femalePicture : <></>)} */}
+                {props.gender === "male" && malePicture}
+                {props.gender == "female" && femalePicture}
             </div>
             <div className="other-elements">
                 {props.children}
